@@ -1,0 +1,7 @@
+.greeting {
+    border: 1px solid black;
+    text-align: left;
+    font-weight: 400;
+    padding: 0.2rem;
+    margin: 1rem;
+}
