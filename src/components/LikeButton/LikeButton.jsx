@@ -5,17 +5,30 @@ class LikeButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            num: 0
+            num: 0,
+            colors: ['purple','blue','green','yellow','orange','red'],
+            currentColor : 0
         }
     }
-    
+
     handleIncrease = () => {
-        this.setState({num: this.state.num + 1})
+        const { currentColor, num } = this.state;
+        this.setState({
+            num: num + 1,
+            currentColor: (currentColor < 5) ? currentColor + 1 : 0
+        })
     };
 
     render () {
+        const { currentColor, colors } = this.state;
         return (
-            <button className="like-btn" onClick={this.handleIncrease}>{this.state.num} Likes</button>
+            <button 
+                className="like-btn" 
+                onClick={this.handleIncrease} 
+                style={{backgroundColor: `${colors[currentColor]}` }}
+            >
+                {this.state.num} Likes
+            </button>
         )
     }
 }
