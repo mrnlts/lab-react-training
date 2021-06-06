@@ -1,0 +1,45 @@
+.creditcard {
+    height: 200px;
+    width: 25%;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 5px 5px 10px  #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.creditcard h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.creditcard span {
+    font-weight: 800;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+.creditcard > img {
+    width: 20%;
+    align-self: flex-end;
+}
+
+.creditcard-text {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.creditcard-text > div {
+    display: flex;
+}
+
+.expires {
+    padding-right: 1rem;
+}
+
+.owner {
+    margin: 0;
+}
