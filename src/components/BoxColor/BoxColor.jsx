@@ -1,5 +1,3 @@
-import './BoxColor.css';
-
 const BoxColor = (props) => {
     const { r, g, b } = props;
     const colour = `rgb(${r}, ${g}, ${b})`;
@@ -10,7 +8,7 @@ const BoxColor = (props) => {
         return `#${hexR}${hexG}${hexB}`;
     }    
     return (
-        <h2 className="boxcolor" style={{backgroundColor: `${colour}`}}>{colour} <br /> {hexColour(r, g, b)} </h2>
+        <h2 className="card" style={{backgroundColor: `${colour}`}}>{colour} <br /> {hexColour(r, g, b)} </h2>
     );
 }
 

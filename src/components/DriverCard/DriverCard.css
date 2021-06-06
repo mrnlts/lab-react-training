@@ -1,0 +1,49 @@
+.driver {
+    border-radius: 5px;
+    border: transparent;
+    background-color: rgb(116, 31, 235);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+}
+
+.driver h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.driver > img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 1rem;
+}
+
+.driver-data {
+    text-align: left;
+}
+
+.driver-rating > div {
+    border: transparent;
+    padding: 0.3rem 0 0.4rem;
+    margin: 0;
+}
+
+.driver-rating > div > span {
+    font-size: 1rem;
+}
+
+.driver-rating > div > span > i {
+    padding-right: 0.3rem;
+}
+
+.driver-data > p {
+    margin: 0;
+    font-size: 0.8rem;
+}

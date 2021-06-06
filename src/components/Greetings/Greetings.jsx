@@ -18,7 +18,7 @@ const Greetings = (props) => {
     }
 
     return (
-        <h2 className="greeting">{greeting} {props.children}</h2>
+        <h2 className="card greeting">{greeting} {props.children}</h2>
     )
 }
 
