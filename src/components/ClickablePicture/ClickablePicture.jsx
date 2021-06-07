@@ -1,3 +1,4 @@
+import './ClickablePicture.css';
 import { Component } from 'react';
 
 class ClickablePicture extends Component {
@@ -16,7 +17,7 @@ class ClickablePicture extends Component {
 
     render() {
         return (
-            <img src={this.state.currentPic} alt="clickable" onClick={this.handleGlasses}></img>
+            <img className="clickable" src={this.state.currentPic} alt="clickable" onClick={this.handleGlasses}></img>
         )
     }
 }

@@ -1,0 +1,19 @@
+.fa-chevron-left,
+.fa-chevron-right {
+    font-size: 3rem;
+    color: tomato;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.carousel > img {
+    width: 200px;
+    border-radius: 10px;
+}

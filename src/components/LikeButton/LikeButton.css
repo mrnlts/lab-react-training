@@ -1,5 +1,7 @@
 .like-btn {
     padding: 1rem;
+    font-size: 1.5rem;
     margin: 1rem auto;
     display: block;
+    cursor: pointer;
 }

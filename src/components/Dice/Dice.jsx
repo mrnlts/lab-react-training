@@ -18,7 +18,6 @@ class Dice extends Component {
     }
 
     render () {
-        console.log(this.state.current, this.state.empty, this.state.sides[0])
         return (
             <img className="dice" src={this.state.current} onClick={this.handleDice} alt="dice"/>
         )
