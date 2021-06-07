@@ -1,0 +1,12 @@
+.FaceBook {
+    text-align: left;
+    height: 20vh;
+    font-size: 1.3rem;
+}
+
+.FaceBook > img {
+    float: left;
+    padding: 0.2rem;
+    height: 19vh;
+    width: 19vh;
+}

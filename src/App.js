@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import profiles from './data/berlin.json';
 import IdCard from './components/IdCard/IdCard';
 import Greetings from './components/Greetings/Greetings';
 import Random from './components/Random/Random';
@@ -12,6 +13,8 @@ import ClickablePicture from './components/ClickablePicture/ClickablePicture';
 import Dice from './components/Dice/Dice';
 import Carousel from './components/Carousel/Carousel';
 import NumbersTable from './components/NumbersTable/NumbersTable';
+import FaceBook from './components/FaceBook/FaceBook';
+
 
 function App() {
   return (
@@ -116,6 +119,8 @@ function App() {
       />
 
       <NumbersTable limit={12} />
+      
+      <FaceBook people={profiles}/>
 
     </div>
   );
