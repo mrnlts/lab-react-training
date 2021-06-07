@@ -4,14 +4,15 @@ class FaceBookProfile extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            person: props.person
+            person: props.person,
+            key: props.key
         }
     }
 
     render() {
         const {person} = this.state;
         return(
-            <div className="card FaceBook" key={person.firstName}>
+            <div className="card FaceBook" id={person.country}>
                 <img src={person.img} alt={person.firstName} />
                 <div className="FaceBook-person-data">
                     <p><strong>First name: </strong> {person.firstName}</p>

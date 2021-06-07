@@ -10,3 +10,7 @@
     height: 19vh;
     width: 19vh;
 }
+
+.blue {
+    background-color: rgb(127, 251, 255);
+}

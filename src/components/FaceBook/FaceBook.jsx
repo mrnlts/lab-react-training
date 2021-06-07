@@ -1,5 +1,6 @@
 import { Component } from "react";
 import FaceBookProfile from '../FaceBookProfile/FaceBookProfile';
+// import Countries from '../Countries/Countries';
 import './FaceBook.css';
 
 class FaceBook extends Component {
@@ -9,29 +10,33 @@ class FaceBook extends Component {
             people: this.props.people
         }
     }
-        
+ 
+    countries = () => {
+        const countriesToDisplay = [];
+        this.state.people.forEach(person => {
+            // console.log(person);
+            return (countriesToDisplay.indexOf(person.country) < 0) ? countriesToDisplay.push(person.country) : null
+        })
+        return countriesToDisplay.map(country => <button key={country} id={`btn${country}`} onClick={()=>this.markBlue(country)}> {country} </button>)
+    }
+
     markBlue = (target) => {
-        console.log("PRE: ", this.state.people[0])
-        this.setState({
-            people: this.state.people.flatMap((person) => (person.country === target) ? person.color = 'blue' : person)
-        }) 
-        console.log("POST: ", this.state.people[0])
+        let paintedCards = document.getElementsByClassName('blue');
+        while(paintedCards.length > 0 ) { paintedCards[0].classList.remove('blue')};
+        const blueCountries = document.querySelector("#" + target);
+        const blueBtn = document.querySelector("#btn" + target)
+        blueCountries.classList.add('blue');
+        blueBtn.classList.add('blue');
     }
 
     render () {
-        const people = this.state.people.map((person) => 
-            <FaceBookProfile person={person} />
+        const people = this.state.people.map((person, index) => 
+            <FaceBookProfile person={person} key={index}/>
         );
-
-        const countries = () => {
-            const countriesToDisplay = [];
-            this.state.people.forEach(person => (countriesToDisplay.indexOf(person.country) < 0) ? countriesToDisplay.push(person.country) : null)
-            return countriesToDisplay.map(country => <button key={country} onClick={() => this.markBlue(country)}> {country} </button>)
-        };
         
         return(
             <div>
-                {countries()}
+                {this.countries()}
                 {people}
             </div>
         )
