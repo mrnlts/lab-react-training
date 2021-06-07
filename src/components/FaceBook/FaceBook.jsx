@@ -1,4 +1,5 @@
 import { Component } from "react";
+import FaceBookProfile from '../FaceBookProfile/FaceBookProfile';
 import './FaceBook.css';
 
 class FaceBook extends Component {
@@ -8,21 +9,29 @@ class FaceBook extends Component {
             people: this.props.people
         }
     }
+        
+    markBlue = (target) => {
+        console.log("PRE: ", this.state.people[0])
+        this.setState({
+            people: this.state.people.flatMap((person) => (person.country === target) ? person.color = 'blue' : person)
+        }) 
+        console.log("POST: ", this.state.people[0])
+    }
+
     render () {
-        console.log("this.state :", this.state.people)
         const people = this.state.people.map((person) => 
-            <div className="card FaceBook" key={person.firstName}>
-                <img src={person.img} alt={person.firstName} />
-                <div className="FaceBook-person-data">
-                    <p><strong>First name: </strong> {person.firstName}</p>
-                    <p><strong>Last name: </strong> {person.lastName}</p>
-                    <p><strong>Country: </strong> {person.country}</p>
-                    <p><strong>Type: </strong> {(person.isStudent) ? 'Student' : 'Teacher'}</p>
-                </div>
-            </div>
+            <FaceBookProfile person={person} />
         );
+
+        const countries = () => {
+            const countriesToDisplay = [];
+            this.state.people.forEach(person => (countriesToDisplay.indexOf(person.country) < 0) ? countriesToDisplay.push(person.country) : null)
+            return countriesToDisplay.map(country => <button key={country} onClick={() => this.markBlue(country)}> {country} </button>)
+        };
+        
         return(
             <div>
+                {countries()}
                 {people}
             </div>
         )

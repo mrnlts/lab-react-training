@@ -19,7 +19,7 @@ import FaceBook from './components/FaceBook/FaceBook';
 function App() {
   return (
     <div className="App">
-      <IdCard 
+      {/* <IdCard 
         lastName='Doe'
         firstName='John'
         gender='male'
@@ -118,7 +118,7 @@ function App() {
         ]}
       />
 
-      <NumbersTable limit={12} />
+      <NumbersTable limit={12} /> */}
       
       <FaceBook people={profiles}/>
 
