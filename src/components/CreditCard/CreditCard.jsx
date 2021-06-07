@@ -2,8 +2,8 @@ import './CreditCard.css';
 
 const CreditCard = (props) => {
     const { type, number, expirationMonth, expirationYear, bank, owner, bgColor, color } = props;
-    const mastercardLogo = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png";
-    const visaLogo = "https://logodownload.org/wp-content/uploads/2016/10/visa-logo.png";
+    const mastercardLogo = "./img/master-card.svg";
+    const visaLogo = "./img/visa.png";
     const logo = (type === 'Visa') ? visaLogo : mastercardLogo ;
     const cardNum = String(number).slice(number.length-4);
     return (

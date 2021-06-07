@@ -1,0 +1,16 @@
+.square {
+    height: 70px;
+    width: 100px;
+    font-size: 2rem;
+    padding-top: 30px;
+    border: 1px solid black;
+}
+
+.isEven{
+    background-color:tomato;
+}
+
+.isOdd {
+    background-color: white;
+    color: black;
+}
