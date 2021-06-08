@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import profiles from './data/berlin.json';
+// import profiles from './data/berlin.json';
 // import IdCard from './components/IdCard/IdCard';
 // import Greetings from './components/Greetings/Greetings';
 // import Random from './components/Random/Random';
@@ -13,7 +13,8 @@ import profiles from './data/berlin.json';
 // import Dice from './components/Dice/Dice';
 // import Carousel from './components/Carousel/Carousel';
 // import NumbersTable from './components/NumbersTable/NumbersTable';
-import FaceBook from './components/FaceBook/FaceBook';
+// import FaceBook from './components/FaceBook/FaceBook';
+import SignupPage from './components/SignupPage/SignupPage';
 
 
 function App() {
@@ -118,10 +119,11 @@ function App() {
         ]}
       />
 
-      <NumbersTable limit={12} /> */}
+      <NumbersTable limit={12} /> 
       
-      <FaceBook people={profiles}/>
+      <FaceBook people={profiles}/>*/}
 
+      <SignupPage  />
     </div>
   );
 }
