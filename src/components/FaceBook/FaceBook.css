@@ -1,16 +1,16 @@
 .FaceBook {
-    text-align: left;
-    height: 20vh;
-    font-size: 1.3rem;
+  text-align: left;
+  height: 20vh;
+  font-size: 1.3rem;
 }
 
 .FaceBook > img {
-    float: left;
-    padding: 0.2rem;
-    height: 19vh;
-    width: 19vh;
+  float: left;
+  padding: 0.2rem;
+  height: 19vh;
+  width: 19vh;
 }
 
 .blue {
-    background-color: rgb(127, 251, 255);
+  background-color: rgb(127, 251, 255);
 }
