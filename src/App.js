@@ -1,27 +1,27 @@
 import React from 'react';
 import './App.css';
-// import profiles from './data/berlin.json';
-// import IdCard from './components/IdCard/IdCard';
-// import Greetings from './components/Greetings/Greetings';
-// import Random from './components/Random/Random';
-// import BoxColor from './components/BoxColor/BoxColor';
-// import CreditCard from './components/CreditCard/CreditCard';
-// import Rating from './components/Rating/Rating';
-// import DriverCard from './components/DriverCard/DriverCard';
-// import LikeButton from './components/LikeButton/LikeButton';
-// import ClickablePicture from './components/ClickablePicture/ClickablePicture';
-// import Dice from './components/Dice/Dice';
-// import Carousel from './components/Carousel/Carousel';
-// import NumbersTable from './components/NumbersTable/NumbersTable';
-// import FaceBook from './components/FaceBook/FaceBook';
-// import SignupPage from './components/SignupPage/SignupPage';  
+import profiles from './data/berlin.json';
+import IdCard from './components/IdCard/IdCard';
+import Greetings from './components/Greetings/Greetings';
+import Random from './components/Random/Random';
+import BoxColor from './components/BoxColor/BoxColor';
+import CreditCard from './components/CreditCard/CreditCard';
+import Rating from './components/Rating/Rating';
+import DriverCard from './components/DriverCard/DriverCard';
+import LikeButton from './components/LikeButton/LikeButton';
+import ClickablePicture from './components/ClickablePicture/ClickablePicture';
+import Dice from './components/Dice/Dice';
+import Carousel from './components/Carousel/Carousel';
+import NumbersTable from './components/NumbersTable/NumbersTable';
+import FaceBook from './components/FaceBook/FaceBook';
+import SignupPage from './components/SignupPage/SignupPage';  
 import RGBColorPicker from './components/RGBColorPicker/RGBColorPicker';
 // import SingleColorPicker from './components/SingleColorPicker/SingleColorPicker';
 
 function App() {
   return (
     <div className="App">
-      {/* <IdCard 
+      <IdCard 
         lastName='Doe'
         firstName='John'
         gender='male'
@@ -121,11 +121,13 @@ function App() {
       />
 
       <NumbersTable limit={12} /> 
-      
+   
       <FaceBook people={profiles}/>
+   
+      <SignupPage  />  
 
-      <SignupPage  /> */}
       <RGBColorPicker />
+
       {/* <SingleColorPicker /> */}
     </div>
   );

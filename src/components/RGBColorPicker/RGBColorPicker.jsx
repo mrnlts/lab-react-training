@@ -10,16 +10,12 @@ class RGBColorPicker extends Component {
       bValue: 0,
     };
   }
-  paint = () => {
-    let valueR = document.getElementById('valueR');
-    let valueG = document.getElementById('valueG');
-    let valueB = document.getElementById('valueB');
-
-    return this.setState({
-      rValue: valueR,
-      gValue: valueG,
-      bValue: valueB,
-    });
+  paint = (e) => {
+    e.target.name === 'r'
+      ? this.setState({ rValue: e.target.value })
+      : e.target.name === 'g'
+      ? this.setState({ gValue: e.target.value })
+      : this.setState({ bValue: e.target.value });
   };
 
   render() {
@@ -27,47 +23,51 @@ class RGBColorPicker extends Component {
 
     return (
       <div>
-        <div
-          className="RGBbox"
-          style={{ backgroundColor: `rgb(${rValue}, 0, 0)` }}
-        ></div>
-        <p>R: </p>
-        <input
-          type="number"
-          value="0"
-          id="valueR"
-          max="255"
-          min="0"
-          onChange={this.paint}
-        />
-
-        <div
-          className="RGBbox"
-          style={{ backgroundColor: `rgb(0, ${gValue}, 0)` }}
-        ></div>
-        <p>G: </p>
-        <input
-          type="number"
-          value="0"
-          id="valueG"
-          max="255"
-          min="0"
-          onChange={this.paint}
-        />
-
-        <div
-          className="RGBbox"
-          style={{ backgroundColor: `rgb(0, 0, ${bValue})` }}
-        ></div>
-        <p>B: </p>
-        <input
-          type="number"
-          value="0"
-          cid="valueB"
-          max="255"
-          min="0"
-          onChange={this.paint}
-        />
+        <div className="flex">
+          <div
+            className="RGBbox"
+            style={{ backgroundColor: `rgb(${rValue}, 0, 0)` }}
+          ></div>
+          <p>R: </p>
+          <input
+            type="number"
+            value={rValue}
+            max="255"
+            min="0"
+            name="r"
+            onChange={this.paint}
+          />
+        </div>
+        <div className="flex">
+          <div
+            className="RGBbox"
+            style={{ backgroundColor: `rgb(0, ${gValue}, 0)` }}
+          ></div>
+          <p>G: </p>
+          <input
+            type="number"
+            value={gValue}
+            max="255"
+            min="0"
+            name="g"
+            onChange={this.paint}
+          />
+        </div>
+        <div className="flex">
+          <div
+            className="RGBbox"
+            style={{ backgroundColor: `rgb(0, 0, ${bValue})` }}
+          ></div>
+          <p>B: </p>
+          <input
+            type="number"
+            value={bValue}
+            max="255"
+            min="0"
+            name="b"
+            onChange={this.paint}
+          />
+        </div>
       </div>
     );
   }
