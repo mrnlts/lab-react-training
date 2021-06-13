@@ -1,5 +1,6 @@
 import './RGBColorPicker.css';
 import { Component } from 'react';
+import SingleColorPicker from '../SingleColorPicker/SingleColorPicker';
 
 class RGBColorPicker extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class RGBColorPicker extends Component {
     };
   }
   paint = (e) => {
+    console.log(e.target.name);
     e.target.name === 'r'
       ? this.setState({ rValue: e.target.value })
       : e.target.name === 'g'
@@ -23,50 +25,17 @@ class RGBColorPicker extends Component {
 
     return (
       <div>
+        <SingleColorPicker color="r" onChange={this.paint} />
+        <SingleColorPicker color="g" onChange={this.paint} />
+        <SingleColorPicker color="b" onChange={this.paint} />
         <div className="flex">
           <div
             className="RGBbox"
-            style={{ backgroundColor: `rgb(${rValue}, 0, 0)` }}
-          ></div>
-          <p>R: </p>
-          <input
-            type="number"
-            value={rValue}
-            max="255"
-            min="0"
-            name="r"
-            onChange={this.paint}
+            style={{ backgroundColor: `rgb(${rValue}, ${gValue}, ${bValue})` }}
           />
-        </div>
-        <div className="flex">
-          <div
-            className="RGBbox"
-            style={{ backgroundColor: `rgb(0, ${gValue}, 0)` }}
-          ></div>
-          <p>G: </p>
-          <input
-            type="number"
-            value={gValue}
-            max="255"
-            min="0"
-            name="g"
-            onChange={this.paint}
-          />
-        </div>
-        <div className="flex">
-          <div
-            className="RGBbox"
-            style={{ backgroundColor: `rgb(0, 0, ${bValue})` }}
-          ></div>
-          <p>B: </p>
-          <input
-            type="number"
-            value={bValue}
-            max="255"
-            min="0"
-            name="b"
-            onChange={this.paint}
-          />
+          <p>
+            rgb({rValue}, {gValue}, {bValue})
+          </p>
         </div>
       </div>
     );

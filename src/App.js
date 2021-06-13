@@ -16,7 +16,6 @@ import NumbersTable from './components/NumbersTable/NumbersTable';
 import FaceBook from './components/FaceBook/FaceBook';
 import SignupPage from './components/SignupPage/SignupPage';  
 import RGBColorPicker from './components/RGBColorPicker/RGBColorPicker';
-// import SingleColorPicker from './components/SingleColorPicker/SingleColorPicker';
 
 function App() {
   return (
@@ -127,8 +126,6 @@ function App() {
       <SignupPage  />  
 
       <RGBColorPicker />
-
-      {/* <SingleColorPicker /> */}
     </div>
   );
 }
